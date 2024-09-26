@@ -1,0 +1,85 @@
+.main-header {
+    background: #eef1f8;
+    border-bottom: solid black 2px;
+
+    @media(max-width:489px) {
+        .barra-header {
+            min-width: 100%;
+    
+            display: flex;
+            justify-content: left;
+    
+            .ldEsq {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 20px;
+                border: 0.5px solid red;
+    
+                img {
+                    display: initial;
+                    max-width: 30px;
+                    max-height: 35px;
+                    margin-left: 15px;
+                }
+            }
+    
+        }
+    
+        .sideBar-header{
+            position: absolute;
+            top:0px;
+            animation-name: animacaoSideBar;
+            animation-duration: 0.4s;
+    
+            width:50%;
+            height: 1000px;
+            max-width: 200px;
+        }
+
+        .sideBar-header[value=true]{
+            left:0;
+        }
+        .sideBar-header[value=false]{
+            left:-500px;
+        }
+
+    }
+    @media(min-width:490px){
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .barra-header{
+            
+            .ldEsq{
+                display: flex;
+                align-items: center;
+                box-sizing: border-box;
+                padding: 0 10px;
+
+                img{
+                    display: none;
+                }
+            }
+        }
+
+        .sideBar-header{
+            animation-name: animacaoSideBar;
+            animation-duration: 0.4s;
+    
+            height: auto;
+        }
+    }
+
+    
+
+    @keyframes animacaoSideBar {
+        from{
+            left:-300px;
+        }
+        to{
+            left:0;
+        }
+    }
+}
