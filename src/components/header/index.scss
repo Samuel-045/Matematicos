@@ -14,7 +14,6 @@
                 flex-direction: row;
                 align-items: center;
                 gap: 20px;
-                border: 0.5px solid red;
     
                 img {
                     display: initial;
@@ -35,13 +34,6 @@
             width:50%;
             height: 1000px;
             max-width: 200px;
-        }
-
-        .sideBar-header[value=true]{
-            left:0;
-        }
-        .sideBar-header[value=false]{
-            left:-500px;
         }
 
     }

@@ -3,28 +3,22 @@ import Menu from '../menuSideBar'
 import { useState } from 'react';
 import './index.scss'
 
-
 export default function Header() {
     let [visibleMenu, setVisibleMenu] = useState(false)
-    let [vrf, setVrf] = useState("false")
-    let styleSideBar = {}
+    let [valor,setValor]=useState({
+        left:"450px"
+    })
 
-    function changeVisible() {
+    function changeVisibleFalse() {
+        setVisibleMenu(false)
+        verificadorStyle()
+    }
+    function changeVisibleTrue() {
         setVisibleMenu(true)
-        setVrf(false)
-        
-        console.log('n')
+        verificadorStyle()
     }
     function verificadorStyle(){
-        if(visibleMenu){
-            styleSideBar = {
-                left:'0'
-            }
-        }else{
-            styleSideBar = {
-                left:'-500px'
-            }
-        }
+        visibleMenu===true ? setValor({left:"450px"}) : setValor({left:"0px"})
     }
 
 
@@ -32,13 +26,13 @@ export default function Header() {
         <div className="main-header">
             <div className="barra-header">
                 <div className="ldEsq">
-                    <img src={IconMenu} alt="Menu" title="Menu" onClick={changeVisible} />
+                    <img src={IconMenu} alt="Menu" title="Menu" onClick={changeVisibleTrue} />
                     <h2>Matematicos</h2>
                 </div>
             </div>
 
-            <div className="sideBar-header">
-                {visibleMenu ? <Menu visibleMenu_={setVisibleMenu} value={vrf} style={styleSideBar}/> : null}
+            <div className="sideBar-header" style={valor}>
+                {visibleMenu ? <Menu visibleMenu_={changeVisibleFalse} /> : null}
             </div>
             
         </div>
