@@ -1,6 +1,6 @@
 @font-face{
   font-family: fontPadrao;
-  src: url("./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+  src: url("./../public/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
 }
 
 body {
