@@ -1,11 +1,13 @@
 import IconMenu from '../../assets/images/menuIcon.png'
-import Menu from '../menuSideBar'
-import { useState } from 'react';
+import MenuSB from '../menuSideBar'
+import MenuNAV from '../menuNav'
+import { useEffect, useState } from 'react';
 import './index.scss'
 
 export default function Header() {
     let [visibleMenu, setVisibleMenu] = useState(false)
-    let [valor,setValor]=useState({
+    let [tamanhoTela, setTamanhoTela] = useState(window.innerWidth)
+    let [posicaoSB,setPosicaoSB]=useState({
         left:"450px"
     })
 
@@ -18,12 +20,20 @@ export default function Header() {
         verificadorStyle()
     }
     function verificadorStyle(){
-        visibleMenu===true ? setValor({left:"450px"}) : setValor({left:"0px"})
+        visibleMenu===true ? setPosicaoSB({left:"-400px"}) : setPosicaoSB({left:"0px"})
     }
 
+    useEffect(() => {
+        const tamanhoTela_ = () => setTamanhoTela(window.innerWidth)
+    
+        window.addEventListener("resize", tamanhoTela_);
+        
+        return () => window.removeEventListener("resize", tamanhoTela_)
+    }, [])
 
     return (
         <div className="main-header">
+            
             <div className="barra-header">
                 <div className="ldEsq">
                     <img src={IconMenu} alt="Menu" title="Menu" onClick={changeVisibleTrue} />
@@ -31,8 +41,9 @@ export default function Header() {
                 </div>
             </div>
 
-            <div className="sideBar-header" style={valor}>
-                {visibleMenu ? <Menu visibleMenu_={changeVisibleFalse} /> : null}
+            <div className="sideBar-header" style={posicaoSB}>
+                {tamanhoTela<489 ? <MenuSB visibleMenu_={changeVisibleFalse} /> : <MenuNAV className='menu-nav'/> }
+                {/* */}
             </div>
             
         </div>
