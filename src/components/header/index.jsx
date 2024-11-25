@@ -14,10 +14,12 @@ export default function Header() {
     function changeVisibleFalse() {
         setVisibleMenu(false)
         verificadorStyle()
+        document.body.style.overflowY='auto'
     }
     function changeVisibleTrue() {
         setVisibleMenu(true)
         verificadorStyle()
+        document.body.style.overflowY='hidden'
     }
     function verificadorStyle(){
         visibleMenu===true ? setPosicaoSB({left:"-400px"}) : setPosicaoSB({left:"0px"})
