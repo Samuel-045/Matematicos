@@ -1,4 +1,3 @@
-import IconMenu from '../../assets/images/menuIcon.png'
 import MenuSB from '../menuSideBar'
 import MenuNAV from '../menuNav'
 import { useEffect, useState } from 'react';
@@ -38,7 +37,7 @@ export default function Header() {
             
             <div className="barra-header">
                 <div className="ldEsq">
-                    <img src={IconMenu} alt="Menu" title="Menu" onClick={changeVisibleTrue} />
+                    <img src='./assets/images/menuIcon.png' alt="Menu" title="Menu" onClick={changeVisibleTrue} />
                     <h2>Matematicos</h2>
                 </div>
             </div>

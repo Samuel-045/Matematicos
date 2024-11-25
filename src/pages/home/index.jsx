@@ -2,19 +2,13 @@ import './index.scss';
 import Header from '../../components/header'
 import Titulo from '../../components/artigosTitulo'
 import Paragrafo from '../../components/artigosConteudo'
-import { useState } from 'react';
 
-import NumEgipcia from '../../assets/images/numEgipcia.webp'
-import NumBabilonica from '../../assets/images/numBabilonica.webp'
-import NumRomana from '../../assets/images/numRomana.webp'
-
-function App() {
+export default function App() {
   return (
     <div className="Home-geral">
       <header>
         <Header />
       </header>
-
 
       <main className='Home-main'>
 
@@ -46,7 +40,7 @@ function App() {
           <Paragrafo conteudo={"Assim, é ali que se desenvolveram modelos para determinar o tamanho das terras. Para isso, eles usaram partes do corpo humano para estabelecer medidas como os pés, o antebraço e o braço."} />
           <Paragrafo conteudo={"Igualmente, elaboraram uma escrita onde cada símbolo correspondia 10 ou a múltiplos de 10. Importante lembrar que este sistema corresponde aos dez dedos que temos nas mãos."} />
           <Paragrafo conteudo={"Observe abaixo o sistema de numeração egípcia:"} />
-          <img src={NumEgipcia} alt="" title="" />
+          <img src='./assets/images/numEgipcia.webp' alt="" title="" />
           <Paragrafo conteudo={"Os egípcios empregaram a matemática para observar os astros e criar o calendário que usamos no mundo ocidental."} />
           <Paragrafo conteudo={"A partir do movimento do Sol e da Terra, eles distribuíram os dias em doze meses ou 365 dias. Igualmente, estabeleceram que um dia tem duração aproximada de vinte e quatro horas."} />
         </section>
@@ -58,7 +52,7 @@ function App() {
           <Paragrafo conteudo={"Este sistema é chamado sexagenal e é a origem da divisão das horas e dos minutos em 60 partes. Até hoje, dividimos um minuto por 60 segundos e uma hora, por 60 minutos."} />
           <Paragrafo conteudo={"Por sua vez, os babilônicos criaram um sistema de numeração cuneiforme e o escreviam os símbolos em tábuas de argila."} />
           <Paragrafo conteudo={"Veja a tabela abaixo com números babilônicos:"} />
-          <img src={NumBabilonica} alt="Numeração babilônica" title="Numeração babilônica" />
+          <img src='./assets/images/numBabilonica.webp' alt="Numeração babilônica" title="Numeração babilônica" />
         </section>
 
         <section>
@@ -74,7 +68,7 @@ function App() {
           <Paragrafo conteudo={"Os romanos continuaram a aplicar todas as descobertas dos gregos em suas construções, como os aquedutos, na enorme rede de estradas ou no sistema de cobrança de impostos."} />
           <Paragrafo conteudo={"Os números romanos eram simbolizados por letras e seu método de multiplicação facilitou o cálculo de cabeça. Atualmente, os números romanos estão presentes nos capítulos de livros e para indicar os séculos."} />
           <Paragrafo conteudo={"Veja abaixo os algarismos e sua equivalência escrita em números romanos:"}/>
-          <img src={NumRomana} alt="Numeração Romana" title="Numeração Romana"/>
+          <img src='./assets/images/numRomana.webp' alt="Numeração Romana" title="Numeração Romana"/>
         </section>
 
         <section>
@@ -106,10 +100,6 @@ function App() {
 
       </main>
 
-      
-
     </div>
   );
 }
-
-export default App;
