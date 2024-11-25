@@ -7,7 +7,7 @@ export default function Header() {
     let [visibleMenu, setVisibleMenu] = useState(false)
     let [tamanhoTela, setTamanhoTela] = useState(window.innerWidth)
     let [posicaoSB,setPosicaoSB]=useState({
-        left:"450px"
+        left:"-400px"
     })
 
     function changeVisibleFalse() {
