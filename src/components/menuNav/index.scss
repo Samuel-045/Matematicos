@@ -12,5 +12,10 @@
     
     li{
         list-style-type: none;
+
+        .link{
+            text-decoration: none;
+            color: black;
+        }
     }
 }
