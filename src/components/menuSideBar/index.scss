@@ -28,6 +28,12 @@
             list-style-type: none;
 
             display: flex;
+
+            .link{
+                text-decoration: none;
+                color: black;
+
+            }
         }
 
         li:hover{
