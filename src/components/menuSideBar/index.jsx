@@ -2,7 +2,7 @@ import './index.scss'
 import { SlArrowRight } from "react-icons/sl";
 import { BiX } from "react-icons/bi";
 
-export default function Menu({visibleMenu_}){
+export default function MenuSB({visibleMenu_}){
 
     return(
         <div className="main-menu" >
