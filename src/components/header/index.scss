@@ -2,20 +2,21 @@
     background: #eef1f8;
     border-bottom: solid black 2px;
     display: flex;
+    animation-duration: 5s;
 
     @media(max-width:489px) {
         .barra-header {
             min-width: 100%;
-    
+
             display: flex;
             justify-content: left;
-    
+
             .ldEsq {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 gap: 20px;
-    
+
                 img {
                     display: initial;
                     max-width: 30px;
@@ -23,51 +24,66 @@
                     margin-left: 15px;
                 }
             }
-    
+
         }
-    
-        .sideBar-header{
+
+        .sideBar-header {
             position: absolute;
-            top:0px;
-            animation-name: animacaoSideBar;
-            animation-duration: 0.4s;
-    
-            width:50%;
+            top: 0px;
+            animation-duration: 0.5s;
             max-width: 200px;
+
+
+            .aberto {
+                animation-name: abreSideBar;
+            }
+
+            .fechado {
+                animation-name: fechaSideBar;
+            }
+
+
         }
 
-    }
-    @media(min-width:490px){
-        .barra-header{
-            justify-content: space-between;
-            width: 100%;
-            
-            .ldEsq{
-                display: flex;
-                align-items: center;
-                box-sizing: border-box;
-                padding: 0 10px;
+        @media(min-width:490px) {
+            .barra-header {
+                justify-content: space-between;
+                width: 100%;
 
-                img{
-                    display: none;
+                .ldEsq {
+                    display: flex;
+                    align-items: center;
+                    box-sizing: border-box;
+                    padding: 0 10px;
+
+                    img {
+                        display: none;
+                    }
+
                 }
+            }
+
+        }
+
+
+        @keyframes abreSideBar {
+            from {
+                left: -300px;
+            }
+
+            to {
+                left: 0;
             }
         }
 
-        .sideBar-header{
-            animation-name: animacaoSideBar;
-            animation-duration: 0.4s;
-        }
-    }
+        @keyframes fechaSideBar {
+            from {
+                left: 0;
+            }
 
-    
-
-    @keyframes animacaoSideBar {
-        from{
-            left:-300px;
-        }
-        to{
-            left:0;
+            to {
+                left: -300px;
+            }
         }
     }
 }
