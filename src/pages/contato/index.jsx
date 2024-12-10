@@ -13,8 +13,9 @@ export default function contato(){
             <main>
                 <Titulo titulo={"Formas de contato"}  />
 
-                <Paragrafo conteudo={"Para entrar em contato com a nossa equipe há os seguintes canais de contato: "}/>
-                <Paragrafo conteudo={"E-mail: matMaticos@gmail.com"} />
+                <Paragrafo conteudo={"Para entrar em contato com a nossa equipe existem quatro maneiras: "}/>
+                <Paragrafo conteudo={"Através do e-mail: matMaticos@gmail.com"} />
+                <Paragrafo conteudo={"Ou através dos seguintes números de telefone:"} />
                 <Paragrafo conteudo={"Telefone : (15)98756-9081"} />
                 <Paragrafo conteudo={"Telefone : (15)79736-9551"} />
                 <Paragrafo conteudo={"Telefone : (15)59146-7521"} />
