@@ -13,7 +13,6 @@ export default function Header() {
     function changeVisibleFalse() {
         setVisibleMenu(false)
         document.body.style.overflowY = 'auto'
-
     }
     function changeVisibleTrue() {
         setVisibleMenu(true)
@@ -21,6 +20,7 @@ export default function Header() {
     }
 
     useEffect(() => {
+        document.body.style.overflowY = 'auto'
         const tamanhoTela_ = () => setTamanhoTela(window.innerWidth)
 
         window.addEventListener("resize", tamanhoTela_);
