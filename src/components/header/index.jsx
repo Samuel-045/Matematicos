@@ -6,27 +6,18 @@ import './index.scss'
 export default function Header() {
     let [visibleMenu, setVisibleMenu] = useState(false)
     let [tamanhoTela, setTamanhoTela] = useState(window.innerWidth)
-    let [posicaoSB, setPosicaoSB] = useState({
-        left: "-400px"
-    })
 
     const btnAbrir = useRef(null)
     const btnFechar = useRef(null)
 
     function changeVisibleFalse() {
         setVisibleMenu(false)
-        verificadorStyle()
         document.body.style.overflowY = 'auto'
 
     }
     function changeVisibleTrue() {
         setVisibleMenu(true)
-        verificadorStyle()
         document.body.style.overflowY = 'hidden'
-
-    }
-    function verificadorStyle() {
-        visibleMenu === true ? setPosicaoSB({ left: "-400px" }) : setPosicaoSB({ left: "0px" })
     }
 
     useEffect(() => {
@@ -40,8 +31,8 @@ export default function Header() {
     return (
         <div className="main-header">
 
-            <div className="barra-header">
-                <div className="ldEsq">
+            <div className="ladoEsq-header">
+                <div className="nomeMenu">
                     <div ref={btnAbrir}>
                         <img src='./assets/images/menuIcon.png' alt="Menu" title="Menu" onClick={changeVisibleTrue} />
                     </div>
@@ -49,16 +40,19 @@ export default function Header() {
                     <h2>Matematicos</h2>
                 </div>
             </div>
-
-            <div className="sideBar-header" style={posicaoSB}>
-                {tamanhoTela < 489 ? 
+ 
+            <div className="ladoDir-header">
+                {tamanhoTela < 585 ? 
                     <div className= {`sideBar-header ${visibleMenu ? 'aberto' : 'fechado'}`} ref={btnFechar}>
-                        <MenuSB className='menu-sb' visibleMenu_={changeVisibleFalse} /> 
+                        <MenuSB visibleMenu_={changeVisibleFalse} /> 
                     </div>                    
                     : 
-                    <MenuNAV className='menu-nav' />}
-                {/* */}
-            </div>
+                    <div className='menu-nav'>
+                        <MenuNAV/> 
+                    </div>
+                }
+                
+            </div>{/* */}
 
         </div>
     );

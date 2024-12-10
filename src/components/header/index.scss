@@ -2,88 +2,93 @@
     background: #eef1f8;
     border-bottom: solid black 2px;
     display: flex;
-    animation-duration: 5s;
+    justify-content: space-between;
+    
+    min-width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    animation-duration: 0.5s;
+    
 
-    @media(max-width:489px) {
-        .barra-header {
-            min-width: 100%;
+    .ladoEsq-header {
+        .nomeMenu {
+            img {
+                max-width: 30px;
+            }
 
             display: flex;
-            justify-content: left;
-
-            .ldEsq {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 20px;
-
-                img {
-                    display: initial;
-                    max-width: 30px;
-                    max-height: 35px;
-                    margin-left: 15px;
-                }
-            }
-
+            width: 60vw;
+            max-width: 250px;
+            min-width: 220px;
+            align-items: center;
+            justify-content: space-around;
         }
+    }
 
-        .sideBar-header {
-            position: absolute;
-            top: 0px;
-            animation-duration: 0.5s;
-            max-width: 200px;
+    .ladoDir-header {
+        position: absolute;
+        top: 0;
+    }
 
-
+    @media (max-width:584px) {
+        .ladoDir-header{
             .aberto {
+                position: absolute;
+                top: 0;
+                left: 0;
                 animation-name: abreSideBar;
+                animation-duration: 0.5s;
             }
-
+    
             .fechado {
+                position: absolute;
+                top: 0;
+                left: -400px;
                 animation-name: fechaSideBar;
+                animation-duration: 0.3s;
+                
             }
-
-
         }
 
-        @media(min-width:490px) {
-            .barra-header {
-                justify-content: space-between;
-                width: 100%;
+        
+    }
 
-                .ldEsq {
-                    display: flex;
-                    align-items: center;
-                    box-sizing: border-box;
-                    padding: 0 10px;
-
-                    img {
-                        display: none;
-                    }
-
+    @media (min-width:585px) {
+        .ladoEsq-header {
+            .nomeMenu {
+                img {
+                    display: none;
                 }
-            }
 
-        }
-
-
-        @keyframes abreSideBar {
-            from {
-                left: -300px;
-            }
-
-            to {
-                left: 0;
+                justify-content: left;
+                margin-left:10px;
             }
         }
 
-        @keyframes fechaSideBar {
-            from {
-                left: 0;
-            }
+        .ladoDir-header{
+            position: initial;
+            display: initial;
+            width: 350px;
+            
+        }
 
-            to {
-                left: -300px;
-            }
+    }
+
+    @keyframes abreSideBar {
+        from {
+            left: -300px;
+        }
+        to {
+            left: 0;
+        }
+    }
+
+    @keyframes fechaSideBar {
+        from {
+            left: 0;
+        }
+        to {
+            left: -300px;
         }
     }
 }
