@@ -2,7 +2,7 @@
     width: 100%;
     min-width: 100%;
     padding: 15px 0;
-    border-top: 1px solid black;
+    border-top: 2px solid black;
     background: #eef1f8;
 
     display: flex;
@@ -21,9 +21,8 @@
         }
 
         .imgDiv:hover{
-            animation-duration: 0.4s;
+            animation-duration: 0.8s;
             animation-name: inclinacaoLogo;
-            
         }
     }
 
@@ -32,7 +31,7 @@
             rotate: 0;
         }
         to{
-            rotate:125deg;
+            rotate:90deg;
         }
     }
 }
