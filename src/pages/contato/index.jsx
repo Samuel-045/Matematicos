@@ -2,6 +2,7 @@ import "./index.scss"
 import Header from "../../components/header"
 import Titulo from "../../components/artigosTitulo"
 import Paragrafo from "../../components/artigosConteudo"
+import Footer from "../../components/footer"
 
 export default function contato(){
     return(
@@ -21,6 +22,10 @@ export default function contato(){
                 <Paragrafo conteudo={"Telefone : (15)59146-7521"} />
                 <Paragrafo conteudo={"Será um prazer poder sanar suas dúvidas e poder te ajudar!"} />
             </main>
+
+            <footer>
+                <Footer/>
+            </footer>
         </div>
     )
 }

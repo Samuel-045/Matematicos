@@ -2,6 +2,7 @@ import './index.scss';
 import Header from '../../components/header'
 import Titulo from '../../components/artigosTitulo'
 import Paragrafo from '../../components/artigosConteudo'
+import Footer from '../../components/footer';
 
 export default function App() {
   return (
@@ -99,6 +100,10 @@ export default function App() {
         </section>
 
       </main>
+
+      <footer>
+        <Footer/>
+      </footer>
 
     </div>
   );

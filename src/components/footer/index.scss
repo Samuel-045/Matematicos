@@ -1,0 +1,38 @@
+.footer-geral{
+    width: 100%;
+    min-width: 100%;
+    padding: 15px 0;
+    border-top: 1px solid black;
+    background: #eef1f8;
+
+    display: flex;
+    justify-content: center;
+
+    .footer-interno{
+        width: 80%;
+        max-width: 500px;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        img{
+            max-width: 35px;
+        }
+
+        .imgDiv:hover{
+            animation-duration: 0.4s;
+            animation-name: inclinacaoLogo;
+            
+        }
+    }
+
+    @keyframes inclinacaoLogo {
+        from{
+            rotate: 0;
+        }
+        to{
+            rotate:125deg;
+        }
+    }
+}

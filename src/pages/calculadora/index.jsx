@@ -1,5 +1,6 @@
 import "./index.scss"
 import Header from "../../components/header"
+import Footer from "../../components/footer"
 
 export default function calculadora(){
     return(
@@ -8,7 +9,13 @@ export default function calculadora(){
                 <Header/>
             </header>
             
-            <p>calculadora</p>
+            <main>
+                <p>calculadora</p>
+            </main>
+            
+            <footer>
+                <Footer/>
+            </footer>
 
         </div>
     )

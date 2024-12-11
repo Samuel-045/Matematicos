@@ -10,5 +10,12 @@
     main{
         width: 60%;
         max-width: 1400px;
+        text-align: center;
+    }
+
+    footer{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
     }
 }
