@@ -5,10 +5,10 @@ export default function Footer(){
         <div className="footer-geral">
 
             <div className='footer-interno'>
-                <h3>Matemáticos</h3>
+                <h3>Matematicos</h3>
 
                 <div className='imgDiv'>
-                    <img src='./assets/images/iconCalc.png' alt="Ícone matemáticos"/>
+                    <img src='./assets/images/iconCalc.png' alt="Ícone matematicos"/>
                 </div>
             </div>
             
