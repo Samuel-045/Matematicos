@@ -2,6 +2,8 @@ import "./index.scss"
 import Header from "../../components/header"
 import Footer from "../../components/footer"
 import { useState } from "react"
+import BotaoEspc from "../../components/botoesEsp"
+import BotaoNum from "../../components/botoesNums"
 
 export default function Calculadora() {
     let [valorTela, setValorTela] = useState("")
@@ -51,7 +53,28 @@ export default function Calculadora() {
             </header>
 
             <main>
-                <p>calculadora</p>
+                
+                <div className="calculadora">
+
+                    <div className="tela-digitos">
+
+                    </div>
+
+                    <div className="botoes">
+
+                        <div className="botoes-ld-esq">
+                            <BotaoNum textBut={"7"} funcNum={sete}/>
+                            <BotaoNum textBut={"8"} funcNum={oito}/>
+                        </div> 
+                        
+                        <div className="botoes-ld-direito">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </main>
 
             <footer>
