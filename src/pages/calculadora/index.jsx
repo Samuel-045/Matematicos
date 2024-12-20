@@ -4,10 +4,12 @@ import Footer from "../../components/footer"
 import { useState } from "react"
 import BotaoEspc from "../../components/botoesEsp"
 import BotaoNum from "../../components/botoesNums"
+import CampoCalc from "../../components/CampoCalc"
 
 export default function Calculadora() {
     let [valorTela, setValorTela] = useState("")
     let [acumulado, setAcumulado] = useState(0)
+    let [opr, setOpr]= useState("")
 
     let resultado = 0
 
@@ -42,10 +44,45 @@ export default function Calculadora() {
         setValorTela(valorTela + "9")
     }
 
-    const limpar = () =>{
+    const soma = () => {
+        setOpr("soma")
+        setAcumulado(valorTela)
+        setValorTela("")
+    }
+    const subtracao = () => {
+        setOpr("subt")
+        setAcumulado(valorTela)
+        setValorTela("")
+    }
+    const multiplicacao = () => {
+        setOpr("mult")
+        setAcumulado(valorTela)
+        setValorTela("")
+    }
+    const divisao = () => {
+        setOpr("divi")
+        setAcumulado(valorTela)
+        setValorTela("")
+    }
+
+    const calculo = () => {
+        if (opr === "soma") {
+            setValorTela(parseInt(acumulado) + parseInt(valorTela))
+        } else if (opr === "subt") {
+            setValorTela(parseInt(acumulado) - parseInt(valorTela))
+        } else if (opr === "mult") {
+            setValorTela(parseInt(acumulado) * parseInt(valorTela))
+        } else if (opr === "divi") {
+            setValorTela(parseInt(acumulado) / parseInt(valorTela))
+        } else {
+            resultado = valorTela
+        }
+    }
+
+    const limpar = () => {
         setValorTela(" ")
         setAcumulado(" ")
-      }
+    }
     return (
         <div className="calculadora-geral">
             <header>
@@ -53,22 +90,36 @@ export default function Calculadora() {
             </header>
 
             <main>
-                
+
                 <div className="calculadora">
 
                     <div className="tela-digitos">
-
+                        <CampoCalc valor={valorTela} />
                     </div>
 
                     <div className="botoes">
 
                         <div className="botoes-ld-esq">
-                            <BotaoNum textBut={"7"} funcNum={sete}/>
-                            <BotaoNum textBut={"8"} funcNum={oito}/>
-                        </div> 
-                        
-                        <div className="botoes-ld-direito">
+                            <BotaoNum textBut={"7"} funcNum={sete} />
+                            <BotaoNum textBut={"8"} funcNum={oito} />
+                            <BotaoNum textBut={"9"} funcNum={nove} />
+                            <BotaoNum textBut={"4"} funcNum={quatro} />
+                            <BotaoNum textBut={"5"} funcNum={cinco} />
+                            <BotaoNum textBut={"6"} funcNum={seis} />
+                            <BotaoNum textBut={"1"} funcNum={um} />
+                            <BotaoNum textBut={"2"} funcNum={dois} />
+                            <BotaoNum textBut={"3"} funcNum={tres} />
+                            <BotaoNum textBut={"0"} funcNum={zero} />
+                            <BotaoEspc textBut={"AC"} funcOpr={limpar} />
 
+                        </div>
+
+                        <div className="botoes-ld-dir">
+                            <BotaoEspc textBut={"÷"} funcOpr={divisao} />
+                            <BotaoEspc textBut={"-"} funcOpr={subtracao} />
+                            <BotaoEspc textBut={"+"} funcOpr={soma} />
+                            <BotaoEspc textBut={"x"} funcOpr={multiplicacao} />
+                            <BotaoEspc textBut={"="} funcOpr={calculo} />
                         </div>
 
                     </div>

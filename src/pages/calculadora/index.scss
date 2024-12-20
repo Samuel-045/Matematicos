@@ -1,4 +1,51 @@
 .calculadora-geral{
+    main{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+
+         .calculadora{
+            border: 1px solid red;
+            padding: 2px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: black;
+            @media (max-width:584px) {
+                width: 100%;
+            }
+            @media (min-width:585px) {
+                width: 100%;
+                max-width: 600px;
+            }
+
+            .botoes{
+                display: flex;
+                padding: 5px;
+                width: 90%;
+                justify-content: center;
+                border: 1px solid green;
+
+                .botoes-ld-esq{
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding: 5px;
+                    gap: 15px;
+
+                    border: 1px solid purple;
+                }
+
+                .botoes-ld-dir{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 5px;
+                    gap: 10px;
+
+                    border: 1px solid gray;
+                }
+            }
+         }
+    }
     
     footer{
         width: 100%;

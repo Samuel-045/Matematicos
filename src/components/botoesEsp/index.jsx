@@ -1,11 +1,11 @@
 import "./index.scss"
 
-export default function BotaoEspc({funcAc, textBut}){
+export default function BotaoEspc({funcOpr, textBut}){
     return(
         <div className="botaoEspc-geral">
             <button onClick={e=>{
                 e.preventDefault()
-                funcAc()
+                funcOpr()
             }}>
                 {textBut}
             </button>
