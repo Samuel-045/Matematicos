@@ -111,6 +111,7 @@ export default function Calculadora() {
                             <BotaoNum textBut={"3"} funcNum={tres} />
                             <BotaoNum textBut={"0"} funcNum={zero} />
                             <BotaoEspc textBut={"AC"} funcOpr={limpar} />
+                            <BotaoEspc textBut={"="} funcOpr={calculo} />
 
                         </div>
 
@@ -119,7 +120,6 @@ export default function Calculadora() {
                             <BotaoEspc textBut={"-"} funcOpr={subtracao} />
                             <BotaoEspc textBut={"+"} funcOpr={soma} />
                             <BotaoEspc textBut={"x"} funcOpr={multiplicacao} />
-                            <BotaoEspc textBut={"="} funcOpr={calculo} />
                         </div>
 
                     </div>
