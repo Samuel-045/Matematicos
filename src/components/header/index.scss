@@ -7,9 +7,7 @@
     min-width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-    animation-duration: 0.5s;
     
-
     .ladoEsq-header {
         .nomeMenu {
             img {
@@ -38,6 +36,7 @@
                 left: 0;
                 animation-name: abreSideBar;
                 animation-duration: 0.5s;
+                z-index: 2;
             }
     
             .fechado {
@@ -46,7 +45,7 @@
                 left: -400px;
                 animation-name: fechaSideBar;
                 animation-duration: 0.3s;
-                
+                z-index: 2;
             }
         }
 
