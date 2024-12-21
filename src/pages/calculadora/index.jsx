@@ -11,8 +11,6 @@ export default function Calculadora() {
     let [acumulado, setAcumulado] = useState(0)
     let [opr, setOpr]= useState("")
 
-    let resultado = 0
-
     const zero = () => {
         setValorTela(valorTela + "0")
     }
