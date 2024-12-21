@@ -41,6 +41,9 @@ export default function Calculadora() {
     const nove = () => {
         setValorTela(valorTela + "9")
     }
+    const virgula = () => {
+        setValorTela(valorTela + ".")
+    }
 
     const soma = () => {
         setOpr("soma")
@@ -65,13 +68,13 @@ export default function Calculadora() {
 
     const calculo = () => {
         if (opr === "soma") {
-            setValorTela(parseInt(acumulado) + parseInt(valorTela))
+            setValorTela(parseFloat(acumulado) + parseFloat(valorTela))
         } else if (opr === "subt") {
-            setValorTela(parseInt(acumulado) - parseInt(valorTela))
+            setValorTela(parseFloat(acumulado) - parseFloat(valorTela))
         } else if (opr === "mult") {
-            setValorTela(parseInt(acumulado) * parseInt(valorTela))
+            setValorTela(parseFloat(acumulado) * parseFloat(valorTela))
         } else if (opr === "divi") {
-            setValorTela(parseInt(acumulado) / parseInt(valorTela))
+            setValorTela(parseFloat(acumulado) / parseFloat(valorTela))
         } 
     }
 
@@ -106,6 +109,7 @@ export default function Calculadora() {
                             <BotaoNum textBut={"2"} funcNum={dois} />
                             <BotaoNum textBut={"3"} funcNum={tres} />
                             <BotaoNum textBut={"0"} funcNum={zero} />
+                            <BotaoNum textBut={"."} funcNum={virgula} />
                             <BotaoEspc textBut={"AC"} funcOpr={limpar} />
                             <BotaoEspc textBut={"="} funcOpr={calculo} />
 
