@@ -72,9 +72,7 @@ export default function Calculadora() {
             setValorTela(parseInt(acumulado) * parseInt(valorTela))
         } else if (opr === "divi") {
             setValorTela(parseInt(acumulado) / parseInt(valorTela))
-        } else {
-            resultado = valorTela
-        }
+        } 
     }
 
     const limpar = () => {
